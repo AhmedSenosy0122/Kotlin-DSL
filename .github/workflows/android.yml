@@ -22,7 +22,12 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
-    - name: Android Test Report Action
-      # You may pin to the exact commit or the version.
-      # uses: asadmansr/android-test-report-action@384cd31388782f4106dc4a1b37eea2ff02e0aad7
-      uses: asadmansr/android-test-report-action@v1.2.0
+
+  time:
+    name: Print date
+    # 7
+    needs: 
+     - build
+    runs-on: ubuntu-latest
+    steps:
+     - run: echo "It is $(date)"
