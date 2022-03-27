@@ -69,6 +69,8 @@ class PuppyActivity : AppCompatActivity(), PuppyAdapter.ItemClickListener {
                 imageResourceId = R.drawable.golden_retriever
             }
         }
+
+
     }
 
   private val adapter by lazy { PuppyAdapter() }
